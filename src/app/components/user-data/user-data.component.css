@@ -1,0 +1,35 @@
+.user-data-container {
+  background-color: rgb(241, 241, 237);
+  padding: 0 8px;
+  border-radius: 1rem;
+}
+
+.user-data-title {
+  width: fit-content;
+  margin: 0 auto 1rem auto;
+  padding: 4px 12px;
+  font-size: 18px;
+}
+
+.table-font {
+  font-size: 14px;
+  white-space: nowrap;
+  font-family: sans-serif;
+  font-weight: lighter;
+  padding: 4px;
+}
+
+.table-font th {
+  background-color: var(--dark-color);
+  color: white;
+  font-weight: lighter;
+}
+.user-data-row {
+  height: 20px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.myCustomModalClass .modal-dialog {
+  max-width: 1000px;
+}

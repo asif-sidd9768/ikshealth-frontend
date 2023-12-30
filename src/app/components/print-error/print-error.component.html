@@ -1,0 +1,13 @@
+<div class="text-danger" *ngIf="shouldDisplayErrors()">
+  <div *ngIf="control.errors.required"><small>Enter {{controlName}}.</small></div>
+  <div *ngIf="control.errors.unique"><small>Hello{{control.errors.unique}}</small></div>
+  <div *ngIf="control.errors?.minlength"><small>Length should be more than {{control.errors.minlength.requiredLength}}.</small></div>
+  <div *ngIf="control.errors.pattern"><small>Only numbers are allowed.</small></div>
+  <div *ngIf="control.errors.email"><small>Enter value should be an email.</small></div>
+  <div *ngIf="control.errors.mobile"><small>Hello{{control.errors.mobile}}</small></div>
+  <div *ngIf="control.errors.confirmPassword"><small>Hello{{control.errors.confirmPassword}}</small></div>
+</div>
+
+<!-- <div *ngIf="shouldDisplayError()" class="text-danger">
+  {{ errorMessage }}
+</div> -->

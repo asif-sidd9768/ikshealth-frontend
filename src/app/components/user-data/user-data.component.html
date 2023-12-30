@@ -1,0 +1,42 @@
+<div class="table-responsive mx-3 user-data-container">
+  <p class="text-center bg-white user-data-title">User Records</p>
+  <table class="table table-bordered w-100 mx-auto">
+    <thead>
+      <tr class="table-font">
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>Gender</th>
+        <th>Designation</th>
+        <th>DOB</th>
+        <th>Age</th>
+        <th style="width: 30px;">Photo</th>
+        <th>Country</th>
+        <th>State</th>
+        <th>City</th>
+        <th>Pin Code</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of allUsers" class="user-data-row">
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.contactNumber}}</td>
+        <td>{{user.gender}}</td>
+        <td>{{user.designation}}</td>
+        <td>{{user.dob}}</td>
+        <td>{{user.age}}</td>
+        <td class="text-center"><img [src]="'http://localhost:3000/'+user?.photo" alt="User Photo" class="image-thumbnail w-50 rounded-circle"></td>
+        <td>{{user.country}}</td>
+        <td>{{user.state}}</td>
+        <td>{{user.city}}</td>
+        <td>{{user.pinCode}}</td>
+        <td class="text-center"><i (click)="open(user)" class="bi bi-eye-fill bg-primary p-1 text-white rounded-3"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- <button class="btn btn-lg btn-outline-primary" (click)="open(123)">Launch demo modal</button> -->

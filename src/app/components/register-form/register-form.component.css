@@ -1,0 +1,16 @@
+.register-form-background {
+  background-color: rgb(241, 241, 237);
+  border-radius: 1rem;
+}
+
+.register-form {
+  padding: 1rem;
+}
+
+.register-button {
+  background-color: var(--dark-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+}

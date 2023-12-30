@@ -1,0 +1,147 @@
+<div class="m-3 mt-5 p-3 register-form-background">
+  <div class="mt-3 register-form">
+  <h3 *ngIf="user" class="text-center mb-5">Editing {{user.firstName}} {{user.lastName}}</h3>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="row">
+    <div class="col-md-3 mb-3">
+      <label for="first-name" class="form-label">
+        <span class="text-danger"> *</span>
+        First Name:
+      </label>
+      <input placeholder="Alice" id="first-name" type="text" class="form-control" formControlName="firstName">
+      <app-print-error [control]="profileForm.get('firstName')" controlName="First Name"></app-print-error>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <label for="last-name" class="form-label">
+        <span class="text-danger"> *</span>
+        Last Name:
+      </label>
+      <input placeholder="Joe" id="last-name" type="text" class="form-control" formControlName="lastName">
+      <app-print-error [control]="profileForm.get('lastName')" controlName="Last Name"></app-print-error>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <label for="email" class="form-label">
+        <span class="text-danger"> *</span>
+        Email:
+      </label>
+      <input placeholder="alice@joe.com" id="email" type="email" class="form-control" formControlName="email">
+      <app-print-error [control]="profileForm.get('email')" controlName="email"></app-print-error>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <label for="contact-number" class="form-label">
+        <span class="text-danger"> *</span>
+        Contact Number:
+      </label>
+      <input placeholder="+91 9876543210" id="contact-number" type="text" inputmode="numeric" class="form-control" formControlName="contactNumber">
+      <app-print-error [control]="profileForm.get('contactNumber')" controlName="Contact Number"></app-print-error>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <label for="designation" class="form-label">
+        <span class="text-danger"> *</span>
+        Designation:
+      </label>
+      <input placeholder="Analyst" id="designation" type="text" class="form-control" formControlName="designation">
+      <app-print-error [control]="profileForm.get('designation')" controlName="designation"></app-print-error>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <label for="gender" class="form-label">
+        <span class="text-danger"> *</span>
+        Gender:
+      </label>
+      <select class="form-select" name="gender" id="gender" formControlName="gender">
+        <option value="" disabled>Choose gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <app-print-error [control]="profileForm.get('gender')" controlName="gender"></app-print-error>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <label for="date-of-birth" class="form-label">
+        <span class="text-danger"> *</span>
+        Date of Birth:
+      </label>
+      <input (change)="calculateAgeFromDob($event)" id="date-of-birth" type="date" class="form-control" formControlName="dob">
+      <app-print-error [control]="profileForm.get('dob')" controlName="dob"></app-print-error>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <label for="age" class="form-label">
+        <span class="text-danger"> *</span>
+        Populate as per dob:
+      </label>
+      <input placeholder="enter dob to know" id="age" type="text" class="form-control" formControlName="age" readonly>
+      <app-print-error [control]="profileForm.get('age')" controlName="age"></app-print-error>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <label for="photo" class="form-label">
+        <span class="text-danger"> *</span>
+        Profile Photo:
+      </label>
+      <input id="photo" (change)="onImageChange($event)" type="file" class="form-control" formControlName="photo">
+      <app-print-error [control]="profileForm.get('photo')" controlName="photo"></app-print-error>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <label for="country" class="form-label">
+        <span class="text-danger"> *</span>
+        Country:
+      </label>
+      <select class="form-select" name="country" id="country" formControlName="country" (change)="onCountryChange()">
+        <option value="" disabled>Choose Country</option>
+        <option *ngFor="let country of allCountries" [value]="country.isoCode">{{country.name}}</option>
+      </select>
+      <app-print-error [control]="profileForm.get('country')" controlName="country"></app-print-error>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <fieldset [disabled]="allStates.length < 1">
+      <label for="state" class="form-label">
+        <span class="text-danger"> *</span>
+        State:
+      </label>
+      <select class="form-select" (change)="onStateChanged()" name="state" id="state" formControlName="state">
+        <option value="" disabled>Choose State</option>
+        <option *ngFor="let state of allStates" [value]="state.isoCode">{{state.name}}</option>
+      </select>
+      <app-print-error [control]="profileForm.get('state')" controlName="state"></app-print-error>
+    </fieldset>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <fieldset [disabled]="allCities.length < 1">
+        <label for="city" class="form-label">
+          <span class="text-danger"> *</span>
+          City:
+        </label>
+        <select class="form-select" name="city" id="city" formControlName="city">
+          <option value="" disabled>Choose city</option>
+          <option *ngFor="let city of allCities" [value]="city.name">{{city.name}}</option>
+        </select>
+        <app-print-error [control]="profileForm.get('city')" controlName="city"></app-print-error>
+      </fieldset>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <label for="pinCode" class="form-label">
+        <span class="text-danger"> *</span>
+        Pincode:
+      </label>
+      <input placeholder="87654321" id="pinCode" type="text" class="form-control" formControlName="pinCode">
+      <app-print-error [control]="profileForm.get('pinCode')" controlName="Pin Code"></app-print-error>
+    </div>
+
+    <div>
+      <button *ngIf="!user" type="submit" class="register-button mt-3 " [disabled]="!profileForm.valid">Submit</button>
+    </div>
+    <div>
+      <button (click)="updateUser()" type="button" class="register-button mt-3 " [disabled]="!profileForm.valid" *ngIf="user">Update</button>
+    </div>
+  </form>
+</div>
+</div>
