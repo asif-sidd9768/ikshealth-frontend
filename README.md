@@ -40,6 +40,6 @@ To run the application, follow these steps:
    ```bash
    npm start
 
-![Alt Text](https://i.ibb.co/JHPg2MF/Screenshot-2023-12-30-at-5-43-01-PM.png)
+![Edit Modal](https://i.ibb.co/JHPg2MF/Screenshot-2023-12-30-at-5-43-01-PM.png)
 ![Alt Text](https://i.ibb.co/DYcjkDh/Screenshot-2023-12-30-at-5-42-55-PM.png)
 ![Alt Text](https://i.ibb.co/QNFyC1q/Screenshot-2023-12-30-at-5-42-48-PM.png)
