@@ -1,4 +1,5 @@
 import { Injectable} from '@angular/core';
+import { CONSTANTS } from '../constants/resource';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +9,7 @@ export class FileUploadService {
 
   async uploadFile(formData: FormData): Promise<any>{
     try {
-      const response =  fetch('http://localhost:3000/api/file-upload', {
+      const response =  fetch(`${CONSTANTS.API_URL}/file-upload`, {
         method: "POST",
         body: formData
       })

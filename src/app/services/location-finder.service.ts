@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { CONSTANTS } from '../constants/resource';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class LocationFinderService {
 
   async getAllCountries (): Promise<any> {
     try{
-      const response =  await fetch("http://localhost:3000/api/countries")
+      const response =  await fetch(`${CONSTANTS.API_URL}/countries`)
       const {countries} = await response.json()
       return countries
     }catch(error){
@@ -19,7 +20,7 @@ export class LocationFinderService {
 
   async getAllStates(country: any): Promise<any> {
     try{
-      const response =  await fetch(`http://localhost:3000/api/${country}/states`)
+      const response =  await fetch(`${CONSTANTS.API_URL}/${country}/states`)
       const {states} = await response.json()
       return states
     }catch(error){
@@ -29,7 +30,7 @@ export class LocationFinderService {
 
   async getAllCities(country: any, state: any): Promise<any> {
     try{
-      const response =  await fetch(`http://localhost:3000/api/${country}/${state}/cities`)
+      const response =  await fetch(`${CONSTANTS.API_URL}/${country}/${state}/cities`)
       const {cities} = await response.json()
       return cities
     }catch(error){
