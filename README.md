@@ -1,27 +1,38 @@
-# Test
+# Angular Frontend Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
+## Features
 
-## Development server
+1. **Form Validation:**
+   - Form validation is mandatory for all fields.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2. **Dynamic Population of State and City:**
+   - On change of the country, data should dynamically populate in the state and city fields.
+   - On change of the country and state, data should dynamically populate in the city field.
 
-## Code scaffolding
+3. **Pincode Validation:**
+   - Pincode should be 8 digits.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+4. **Age Calculation:**
+   - Age should be calculated based on the selected date of birth.
 
-## Build
+5. **Data Insertion and Display:**
+   - On click of the save button, the data should be inserted into the database and displayed on the page below the form.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+6. **Edit Data:**
+   - On click of the edit button, a modal should open with detailed information to edit the data.
 
-## Running unit tests
+## Running the Application
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To run the application, follow these steps:
 
-## Running end-to-end tests
+1. **Clone the Repository:**
+   ```bash
+   https://github.com/asif-sidd9768/ikshealth-frontend
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Navigate to the Project Directory:
+  ```bash
+  cd ikshealth-frontend
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Install dependencies
+   ```bash
+  cd ikshealth-frontend
