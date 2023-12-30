@@ -40,6 +40,27 @@ To run the application, follow these steps:
    ```bash
    npm start
 
-![Alt Text](https://i.ibb.co/QNFyC1q/Screenshot-2023-12-30-at-5-42-48-PM.png, "USER REGISTER FORM")
-![Alt Text](https://i.ibb.co/DYcjkDh/Screenshot-2023-12-30-at-5-42-55-PM.png, "USER RECORDS TABLE")
-![Edit Modal](https://i.ibb.co/JHPg2MF/Screenshot-2023-12-30-at-5-43-01-PM.png, "USER EDIT MODAL")
+
+<figure>
+  <img
+  src="https://i.ibb.co/QNFyC1q/Screenshot-2023-12-30-at-5-42-48-PM.png"
+  alt="The beautiful MDN logo.">
+  <figcaption>USER REGISTER FORM</figcaption>
+</figure>
+
+
+<figure>
+  <img
+  src="https://i.ibb.co/DYcjkDh/Screenshot-2023-12-30-at-5-42-55-PM.png"
+  alt="The beautiful MDN logo.">
+  <figcaption>USER RECORDS TABLE</figcaption>
+</figure>
+
+
+<figure>
+  <img
+  src="[https://developer.mozilla.org/static/img/favicon144.png](https://i.ibb.co/JHPg2MF/Screenshot-2023-12-30-at-5-43-01-PM.png)"
+  alt="The beautiful MDN logo.">
+  <figcaption>USER EDIT MODAL</figcaption>
+</figure>
+
