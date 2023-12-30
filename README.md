@@ -44,7 +44,7 @@ To run the application, follow these steps:
 <figure>
   <img
   src="https://i.ibb.co/QNFyC1q/Screenshot-2023-12-30-at-5-42-48-PM.png"
-  alt="The beautiful MDN logo.">
+  alt="USER REGISTER FORM">
   <figcaption>USER REGISTER FORM</figcaption>
 </figure>
 
@@ -52,15 +52,15 @@ To run the application, follow these steps:
 <figure>
   <img
   src="https://i.ibb.co/DYcjkDh/Screenshot-2023-12-30-at-5-42-55-PM.png"
-  alt="The beautiful MDN logo.">
+  alt="USER RECORDS TABLE">
   <figcaption>USER RECORDS TABLE</figcaption>
 </figure>
 
 
 <figure>
   <img
-  src="[https://developer.mozilla.org/static/img/favicon144.png](https://i.ibb.co/JHPg2MF/Screenshot-2023-12-30-at-5-43-01-PM.png)"
-  alt="The beautiful MDN logo.">
+  src="https://i.ibb.co/JHPg2MF/Screenshot-2023-12-30-at-5-43-01-PM.png"
+  alt="USER EDIT MODAL">
   <figcaption>USER EDIT MODAL</figcaption>
 </figure>
 
