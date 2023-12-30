@@ -28,11 +28,16 @@ To run the application, follow these steps:
 1. **Clone the Repository:**
    ```bash
    https://github.com/asif-sidd9768/ikshealth-frontend
-
 2. Navigate to the Project Directory:
-  ```bash
-  cd ikshealth-frontend
-
+   ```bash
+   cd ikshealth-frontend
+  
 3. Install dependencies
    ```bash
-  cd ikshealth-frontend
+   npm install
+
+4. Run the App
+   ```bash
+   npm start
+
+![Alt Text](https://i.ibb.co/JHPg2MF/Screenshot-2023-12-30-at-5-43-01-PM.png)
